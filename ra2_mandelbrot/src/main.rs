@@ -49,8 +49,8 @@ fn render_mandelbrot(escaped_vals: Vec<Vec<usize>>)
         let mut line = String::with_capacity(row.len());
         for column in row {
             let val = match column {
-                0..=2 => ' ',
-                3..=5 => '.',
+                0..=2 => '🟦',
+                3..=5 => '🆓',
                 6..=10 => '🌍',
                 11..=30 => '🔴',
                 31..=100 => '🟡',
@@ -67,6 +67,6 @@ fn render_mandelbrot(escaped_vals: Vec<Vec<usize>>)
 }
 
 fn main() {
-    let mandelbrot = calculate_mandelbrot(1000, -3.0, 2.0, -1.0, 1.0, 120, 44);
+    let mandelbrot = calculate_mandelbrot(1000, -2.0, 2.0, -2.0, 2.0, 120, 100);
     render_mandelbrot(mandelbrot);
 }
