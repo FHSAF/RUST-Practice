@@ -67,6 +67,6 @@ fn render_mandelbrot(escaped_vals: Vec<Vec<usize>>)
 }
 
 fn main() {
-    let mandelbrot = calculate_mandelbrot(1000, -2.0, 2.0, -2.0, 2.0, 120, 100);
+    let mandelbrot = calculate_mandelbrot(1000, -2.5, 2.0, -2.0, 2.0, 120, 100);
     render_mandelbrot(mandelbrot);
 }
